@@ -1,31 +1,24 @@
 import styled from 'styled-components'
-import { Props } from '.'
 
-export const Container = styled.div`
+const Container = styled.div`
   position: relative;
-  color: #${(props) => props.theme.corCinza};
   height: 360px;
   width: 100%;
-  position: relative;
   display: flex;
   align-items: center;
-  padding: 16px;
 
   @media (max-width: 768px) {
     height: auto;
     padding: 24px 0;
   }
-`
-export const heroTitle = styled.h2`
-font-family: Gloock, serif;
-font-size: 48px;
 
-@media (max-width: 768px) {
-    font-size: 32px;
+  section {
+    position: absolute;
+    background-color: ${(props) => props.theme.corPrincipal};
+    opacity: 0.5;
+    content: '';
+    width: 100%;
+    height: 100%;
   }
-}
 `
-
-export const ImageBackground = styled.img`
-  background-size: cover;
-`
+export default Container

@@ -3,6 +3,7 @@ import FormVagas from '../../components/FormVagas'
 
 import Vaga from '../../components/Vaga'
 import Lista from './style'
+import { Container } from '../../styles'
 
 // import styles from './ListaVagas.module.css'
 
@@ -98,9 +99,9 @@ const ListaVagas = () => {
   )
 
   return (
-    <>
+    <Container>
       <FormVagas
-        aoPesquisar={function (): void {
+        aoPesquisar={function setFiltro(): void {
           throw new Error('Function not implemented.')
         }}
       ></FormVagas>
@@ -118,7 +119,7 @@ const ListaVagas = () => {
           />
         ))}
       </Lista>
-    </>
+    </Container>
   )
 }
 
